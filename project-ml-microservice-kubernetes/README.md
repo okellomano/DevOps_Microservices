@@ -1,4 +1,5 @@
-<include a CircleCI status badge, here>
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/okellomano/DevOps_Microservices/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/okellomano/DevOps_Microservices/tree/master)
+
 
 ## Project Overview
 
@@ -17,10 +18,20 @@ Your project goal is to operationalize this working, machine learning microservi
 * Deploy a container using Kubernetes and make a prediction
 * Upload a complete Github repo with CircleCI to indicate that your code has been tested
 
-You can find a detailed [project rubric, here](https://review.udacity.com/#!/rubrics/2576/view).
+### DEscription of Files and Folders
 
-**The final implementation of the project will showcase your abilities to operationalize production microservices.**
-
+* .circleci: For the CircleCI build server
+* model_data : this folder contains the pretrained sklearn model and housing csv files
+* output_txt_files: folder contains sample output logs from running ./run_docker.sh and ./run_kubernetes.sh
+* app.py : contains the flask app
+* Dockerfile: contains instructions to containerize the application
+* Makefile : contains instructions for environment setup and lint tests
+* requirements.txt: list of required dependencies
+* run_docker.sh: bash script to build Docker image and run the application in a Docker container
+* upload_docker.sh: bash script to upload the built Docker image to Dockerhub
+* run_kubernetes.sh: bash script to run the application in a Kubernetes cluster
+* make_prediction.sh: bash script to make predictions against the Docker container and k8s cluster
+* README.md: this README file
 ---
 
 ## Setup the Environment
